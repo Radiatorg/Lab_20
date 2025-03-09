@@ -4,6 +4,7 @@ const path = require("path");
 const data = require("./data");
 
 const app = express();
+app.get('/favicon.ico', (req, res) => res.status(204));
 
 app.use(express.static(path.join(__dirname, "public")));
 app.use(express.json());
