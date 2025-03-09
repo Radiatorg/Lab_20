@@ -72,4 +72,7 @@ app
     res.json({ contacts });
   });
 
-app.listen(4000, () => console.log("server is listening on 4000 port"));
+  const PORT = process.env.PORT || 4000;
+
+  app.listen(PORT, () => console.log(`Server is listening on port ${PORT}`));
+  
