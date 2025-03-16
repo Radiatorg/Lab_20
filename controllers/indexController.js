@@ -15,7 +15,6 @@ exports.getAdd = (req, res) => {
 exports.getUpdate = (req, res) => {
     const name = req.query.name;
     const phone = req.query.phone;
-
     const contacts = data.map((d) => `${d.name} - ${d.phone}`);
 
     res.render("update.handlebars", {

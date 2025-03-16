@@ -17,6 +17,11 @@ if (updateButton) {
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
 
+    if (!name || !phone) {
+      alert("Ошибка: Имя или телефон не могут быть пустыми!");
+      return;
+    }
+
     const data = {
       name: name,
       phone: phone,
@@ -40,11 +45,16 @@ if (updateButton) {
   });
 }
 
-const addButton = document.getElementById("add_button");
+const addButton = document.getElementById("mybutton");
 if (addButton) {
   addButton.addEventListener("click", function () {
     const name = document.getElementById("name").value;
     const phone = document.getElementById("phone").value;
+    
+    if (!name || !phone) {
+      alert("Ошибка: Имя или телефон не могут быть пустыми!");
+      return;
+    }
 
     const data = {
       name: name,
